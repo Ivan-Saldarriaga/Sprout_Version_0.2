@@ -14,8 +14,20 @@
           placeholder="Company Name"
         />
       </div>
-      <div>Company name is: {{ buisness.buisnessName }}</div>
-      <br />
+      <p>Company name is: {{ buisness.buisnessName }}</p>
+
+      <!-- TEMPORARY ADDITION FOR BACKEND PURPOSES -->
+      <div class="Address">
+        <input
+          type="text2"
+          name="buis_Address"
+          #boxtemp
+          (keyup)="setUSERNAMETEMP(boxtemp.value)"
+          placeholder="Username"
+        />
+      </div>
+      <div>Username is: {{buisness.username}} (TEMPORARY)</div>
+      <br>
       <div class="Address">
         <input
           type="text2"
@@ -73,6 +85,7 @@
             multiple
             style="display: none"
             value="select"
+            accept="image/pdf, image/png, image/jpeg"
             #selectFile
             (change)="onFileSelected($event)"
           />
